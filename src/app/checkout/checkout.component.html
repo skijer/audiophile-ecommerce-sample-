@@ -3,7 +3,7 @@
     <h2>CHECKOUT</h2>
     <br><br>
     <sub class="overline">BILLING DETAILS</sub>
-    <div style="position: absolute;left: 6.58%;right: 51.1%;top: 15.28%;bottom: 77.53%;">
+    <div style="position: absolute;left: 6.58%;right: 51.1%;top: 19.28%;bottom: 77.53%;">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Name</label>
             <input type="text" class="form-control" placeholder="Name Last Name" style="border-radius: 10px;">
@@ -13,7 +13,7 @@
             <input class="form-control" placeholder="+1 234-567-8901" style="border-radius: 10px;">
           </div>
     </div>
-    <div style="position: absolute;left: 51.1%;right: 6.58%;top: 15.28%;bottom: 77.53%;">
+    <div style="position: absolute;left: 51.1%;right: 6.58%;top: 19.28%;bottom: 77.53%;">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
             <input type="email" class="form-control" placeholder="name@example.com">
@@ -21,12 +21,12 @@
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br>
     <sub class="overline">SHIPPING INFO</sub>
-    <div style="position: absolute;width: 634px;height: 291px;left: 48px;top: 452px;">
+    <div style="position: absolute;width: 634px;height: 291px;left: 48px;top: 521px;">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Address</label>
             <input type="text" class="form-control" placeholder="1234 Example Avenue" style="border-radius: 10px;">
           </div>
-          <div style="position: absolute;right: 51.1%;top: 35.28%;bottom: 77.53%;left: 0%;">
+          <div style="position: absolute;right: 51.1%;top: 39.28%;bottom: 77.53%;left: 0%;">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Zip code</label>
                 <input type="text" class="form-control" placeholder="112233" style="border-radius: 10px;">
@@ -36,7 +36,7 @@
                 <input class="form-control" placeholder="United States" style="border-radius: 10px;">
               </div>
         </div>
-        <div style="position: absolute;left: 51.1%;right: 0%;top: 35.28%;bottom: 77.53%;">
+        <div style="position: absolute;left: 51.1%;right: 0%;top: 39.28%;bottom: 77.53%;">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">City</label>
                 <input type="text" class="form-control" placeholder="New York">
@@ -47,15 +47,15 @@
     <div style="position: absolute;left: 51.1%;right: 0%;top: 35.28%;bottom: 77.53%; transform:translateY(273px)">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" style="transform:translateX(-300px)">Payment Method</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked (change)="selectPaymentMethod(false)">
-                  <label class="form-check-label" for="flexRadioDefault1">
+                <div>
+                  <input type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked (change)="selectPaymentMethod(false)">
+                  <label for="flexRadioDefault1">
                     e-Money
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" (change)="selectPaymentMethod(true)">
-                  <label class="form-check-label" for="flexRadioDefault2">
+                <div>
+                  <input type="radio" name="flexRadioDefault" id="flexRadioDefault2" (change)="selectPaymentMethod(true)">
+                  <label for="flexRadioDefault2">
                     Cash on Delivery
                   </label>
                 </div>              

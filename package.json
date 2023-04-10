@@ -1,4 +1,5 @@
 {
+  "build": "ng build --prod && purgecss --config purgecss.config.js --out ./dist/css/ --css ./src/app/checkout/checkout.component.css",
   "name": "audiophile-ecommerce",
   "version": "0.0.0",
   "scripts": {
@@ -28,13 +29,16 @@
     "@angular-devkit/build-angular": "^15.1.1",
     "@angular/cli": "~15.1.1",
     "@angular/compiler-cli": "^15.1.0",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@types/jasmine": "~4.3.0",
+    "css-loader": "^6.7.3",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "style-loader": "^3.3.2",
     "typescript": "~4.9.4"
   }
 }

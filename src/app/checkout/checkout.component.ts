@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CartService } from '../services/cart.service';
 
-
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
