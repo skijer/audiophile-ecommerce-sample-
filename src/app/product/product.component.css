@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('/assets/fonts/Manrope-Regular.ttf') format('truetype');
+}
+.counter{
+    width:120px;
+    height: 48px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: rgba(240, 240, 240, 0.7);
+}
+.sum{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color:var(--color03);
+    opacity: 0.6;
+    position: relative;
+    margin-top: 14px;
+}
+.sum:hover{
+    color:var(--color01);
+}

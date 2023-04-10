@@ -1,0 +1,29 @@
+<div>
+    <h6 class="top-let" (click)="openModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+    </h6>
+</div>
+<div class="modal" [ngClass]="{ 'open': modalOpen }">
+<button (click)="closeModal()" style="position:absolute;height: 100%; width: 100%; z-index: -100; opacity: 0;">Close Modal</button>
+  <div class="modal-content">
+    <h6 style="padding-top: 15px;">CART <span style="margin-left: 30%;">Total: {{total}}</span></h6>
+    <div  *ngFor="let prod of cart; let i = index">
+        <div *ngIf="prod.quantity!=0">
+        <div style="display: flex; position: relative; width: 100%; transform: translateY(-15px);">
+            <img src="/assets/products/{{prod.img}}" alt="" style="width: 64px;height: 64px; margin-right: 0; border-radius: 10px;transform: translateY(-16px);margin-bottom: 16px;">
+            <div style="width: 140px;height: 10px;display: inline;transform: translate(16px,-48px);" [ngStyle]="{'top': (i*76)+ 'px'}">
+            <h6 style=" font-size: 14px;">{{prod.name}}</h6>
+            </div>
+            <div style="width: 140px;height: 10px;transform: translate(-120px,-24px); text-align: center;" [ngStyle]="{'top': (i*76)+ 'px'}">
+            <h6 style="opacity: 0.30; font-size: 14px;">${{prod.price*prod.quantity}}</h6>
+            </div>
+            <div  style="width: 96px;height: 32px;"><div class="counter" style="left: 0.11%;transform: translateX(-64px);"><button class="sum" style="background:none;border: none; margin-right: 20px;" (click)="addM(-1, prod.id)">-</button>  {{prod.quantity}}  <button class="sum" style="background:none;border: none; margin-left: 20px;" (click)="addM(1, prod.id)">+</button>
+            </div></div>
+            </div>
+        </div>
+    </div>
+    <button class="button1" style="width: 90%; transform: translateY(-24px);" routerLink="/checkout">CHECKOUT</button>
+  </div>
+</div>

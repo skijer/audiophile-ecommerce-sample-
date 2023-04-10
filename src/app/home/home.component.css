@@ -1,0 +1,18 @@
+.container1{
+    position: absolute;
+    width: 398px;
+    height: 346px;
+    left: 165px;
+    top: 225px;
+}
+
+
+
+.bt2{
+    background-color: var(--color06);
+    color: var(--color04);
+}
+.bt2:hover{
+    background-color: var(--color03);
+    opacity: 0.8;
+}

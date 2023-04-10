@@ -1,0 +1,64 @@
+.navbar{
+    position: absolute;
+    width: 1109.83px;
+    height: 28px;
+    left: 165px;
+    top: 0px;
+    z-index: 1;
+}
+.top-let{
+    color: var(--color04);
+    display: inline;
+    float: left;
+    margin-left: 25px;
+    margin-top: 45px;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+.top-let:hover{
+    color: var(--color02);
+}
+.logo{
+    color: var(--color04);
+    font-weight: bold;
+    letter-spacing: -1px;
+    display: inline;
+    float: left;
+    margin-right: 180px;
+}
+
+html{
+    margin-bottom: 0px;
+}
+app-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top:2000px;
+    width: 100%;
+  }
+.rectangle{
+    position: absolute;
+    width: 1110px;
+    height: 1px;
+    left: 65px;
+    top: 96px;
+
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.2;
+}
+.group2{
+    display: inline;
+    float: left;
+    margin-left: 82px;
+    margin-right: 140px;
+    margin-top: 180px;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+.pad2{
+    margin-top: -40px; margin-right: 160px; margin-left: 130px; font-weight: 600; opacity: 0.5;
+}
+

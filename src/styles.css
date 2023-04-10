@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('/assets/fonts/Manrope-Regular.ttf') format('truetype');
+    font-family: 'Manrope-Bold';
+    src: url('/assets/fonts/Manrope-SemiBold.ttf') format('truetype');
+  }
+  :root {
+    --color01: #d87d4a;
+    --color02: #fbaf85;
+    --color03: #101010;
+    --color04: #ffffff;
+    --color05: #f1f1f1;
+    --color06: #000;
+    --color07: #fafafa;
+    --font-size: 1rem;
+  }
+  body,html {
+    font-family: 'Manrope';
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  h1{
+    font-family: 'Manrope-Bold';
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+  }
+  h2{
+    font-family: 'Manrope-Bold';
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+  }
+  h3{
+    font-family: 'Manrope-Bold';
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+  }
+  h4{
+    font-family: 'Manrope-Bold';
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+  }
+  h5{
+    font-family: 'Manrope-Bold';
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+  }
+  h6{
+    font-family: 'Manrope-Bold';
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+  }
+  .overline{
+    font-family: 'Manrope';
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+    color:var(--color02);
+  }
+  sub{
+    font-family: 'Manrope';
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color:var(--color01);
+  }
+  .button1{
+    background-color: var(--color01);
+    color:var(--color05);
+    border-style: solid;
+    border-color: var(--color01);
+    padding: 15px;
+    font-size: 13px;
+    font-family: 'Manrope-Bold';
+  }
+  .button1:hover{
+    background-color: var(--color02);
+    color:var(--color04);
+    border-style: solid;
+    border-color: var(--color02);
+  }
+  .button2{
+    border-color: var(--color06);
+    border-style: solid;
+    background-color:#00000000;
+    color:var(--color06);
+    padding: 15px;
+    font-size: 13px;
+    font-family: 'Manrope-Bold';
+  }
+  .button2:hover{
+    border-color: var(--color06);
+    border-style: solid;
+    background-color: var(--color06);
+    color:var(--color07);
+  }
+  .button3{
+    color: var(--color03);
+    border-style:hidden;
+    background-color: #00000000;
+    padding: 15px;
+    font-size: 13px;
+  }
+  .button3:hover{
+    color:var(--color01);
+    border-style:hidden;
+  }
+  .button3::after{
+    color:var(--color01);
+    content: ">";
+    }
+
+    
+.pad2:hover{
+  opacity: 1;
+}
+.group2{
+  display: inline;
+  float: left;
+  margin-left: 82px;
+  margin-right: 140px;
+  margin-top: 180px;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+.pad2{
+  margin-top: -40px; margin-right: 160px; margin-left: 130px; font-weight: 600; opacity: 0.5;
+}
+
+
+.foot{
+  position: absolute;
+  width: 540px;
+  height: 100px;
+  left: 165px;
+  
+  z-index: 1;
+
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;    
+  color: #FFFFFF;
+  
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.footbar{
+  color: var(--color04);
+  display: inline;
+  float: left;
+  margin-left: 30px;
+  margin-top: 45px;
+  font-size: 15px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+.footbar:hover{
+  color: var(--color02);
+}
+.logo{
+  color: var(--color04);
+  font-weight: bold;
+  letter-spacing: -1px;
+  display: inline;
+  float: left;
+  margin-right: 180px;
+}

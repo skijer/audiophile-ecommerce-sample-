@@ -1,0 +1,29 @@
+.up-container{
+    position: absolute;
+    width: 100%;
+    height: 336px;
+    left: 0px;
+    top: 0px;
+
+    background: #000000;
+}
+.title{
+    position: absolute;
+    width: 283px;
+    height: 44px;
+    left: 40%;
+    top: 145px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    /* identical to box height, or 110% */
+
+    text-align: center;
+    letter-spacing: 1.42857px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}

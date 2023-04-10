@@ -1,0 +1,114 @@
+<div class="up-container"></div>
+    <section style="position: absolute;width: 730px;height: 1126px;left: 165px;top: 239px;">
+    <h2>CHECKOUT</h2>
+    <br><br>
+    <sub class="overline">BILLING DETAILS</sub>
+    <div style="position: absolute;left: 6.58%;right: 51.1%;top: 15.28%;bottom: 77.53%;">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Name Last Name" style="border-radius: 10px;">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+            <input class="form-control" placeholder="+1 234-567-8901" style="border-radius: 10px;">
+          </div>
+    </div>
+    <div style="position: absolute;left: 51.1%;right: 6.58%;top: 15.28%;bottom: 77.53%;">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" placeholder="name@example.com">
+          </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    <sub class="overline">SHIPPING INFO</sub>
+    <div style="position: absolute;width: 634px;height: 291px;left: 48px;top: 452px;">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Address</label>
+            <input type="text" class="form-control" placeholder="1234 Example Avenue" style="border-radius: 10px;">
+          </div>
+          <div style="position: absolute;right: 51.1%;top: 35.28%;bottom: 77.53%;left: 0%;">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Zip code</label>
+                <input type="text" class="form-control" placeholder="112233" style="border-radius: 10px;">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Country</label>
+                <input class="form-control" placeholder="United States" style="border-radius: 10px;">
+              </div>
+        </div>
+        <div style="position: absolute;left: 51.1%;right: 0%;top: 35.28%;bottom: 77.53%;">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">City</label>
+                <input type="text" class="form-control" placeholder="New York">
+              </div>
+            </div>
+    <br><br><br><br><br><br><br><br><br>
+    <sub class="overline" style="left:-48px">Payment Details</sub>
+    <div style="position: absolute;left: 51.1%;right: 0%;top: 35.28%;bottom: 77.53%; transform:translateY(273px)">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="transform:translateX(-300px)">Payment Method</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked (change)="selectPaymentMethod(false)">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    e-Money
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" (change)="selectPaymentMethod(true)">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Cash on Delivery
+                  </label>
+                </div>              
+              </div>
+            </div>
+    </div>
+    <img src="/assets/payment tag.png" alt="" style="position: absolute;width: 634px;height: 75px;left: 48px;top: 1003px;" *ngIf="payment">
+    <div style="position: absolute;width: 634px;height: 75px;left: 48px;top: 1003px;" *ngIf="!payment">
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">e-Money Number</label>
+            <input type="text" class="form-control" placeholder="65749324" style="border-radius: 10px;">
+          </div>
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">e-Money PIN</label>
+            <input class="form-control" placeholder="1234" style="border-radius: 10px;">
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section style="position: absolute;width: 350px;height: 612px;left: 925px;top: 239px;">
+  <div class="summary">
+    <h6 style="padding-top: 15px;"></h6>
+    <div  *ngFor="let prod of cart; let i = index">
+        <div *ngIf="prod.quantity!=0">
+        <div style="display: flex; position: relative; width: 100%;">
+            <img src="/assets/products/{{prod.img}}" alt="" style="width: 64px;height: 64px; margin-right: 0; border-radius: 10px;margin-bottom: 16px;">
+              <div style="width: 140px;height: 10px;display: inline;transform: translate(10px,28px);" [ngStyle]="{'top': (i*104)+ 'px'}">
+                <h6 style=" font-size: 14px;">{{prod.name}}</h6>
+                </div>
+                <div style="width: 140px;height: 10px; text-align: center;transform: translateY(28px);" [ngStyle]="{'top': (i*104)+ 'px'}">
+                <h6 style="opacity: 0.30; font-size: 14px;">${{prod.price*prod.quantity}}</h6>
+                </div>
+                <div  style="width: 96px;height: 32px;"></div><div class="counter" style="left: 0.11%; transform: translateY(28px);"> {{prod.quantity}}
+            </div>
+            </div>
+        </div>
+    </div>
+    <h6 style="top:85%">Summary Total: {{total}}</h6>
+    <button class="button1" style="width: 90%;" (click)="open()">CONTINUE & PAY</button>
+  </div>
+</section>
+<div class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="close()">&times;</span>
+    <h4 class="modal-title">Thank you for your order</h4>
+    <div class="modal-body">
+      Your order has been received and will be processed shortly.
+    </div>
+  </div>
+</div>
