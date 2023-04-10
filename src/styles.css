@@ -21,6 +21,11 @@
     margin: 0;
     padding: 0;
   }
+  @media (max-width: 2500px) {
+    html {
+      zoom: 95%;
+    }
+  }
   h1{
     font-family: 'Manrope-Bold';
     font-size: 56px;
